@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f8ef">
+  <meta name="description" content="Discover fun outdoor activities and spend more time in nature.">
+  <title>TouchGrass | Your Outdoor Companion</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">🌿 TouchGrass<span>.</span></a>
+    <span class="local-badge">● Works Offline</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">LESS SCROLLING. MORE LIVING.</p>
+        <h1>Your next adventure<br>starts <span>outside.</span></h1>
+        <p class="subtitle">
+          Take a break from the digital world. Discover simple,
+          fun outdoor activities and reconnect with nature.
+        </p>
+        <a href="#planner" class="primary-btn">Plan my adventure ↗</a>
+        <div class="features">
+          <span>🌱 Nature focused</span>
+          <span>🔒 No data sent</span>
+          <span>📵 Offline ready</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Illustration of green hills">
+        <div class="sun"></div>
+        <div class="mountain mountain-back"></div>
+        <div class="mountain mountain-front"></div>
+        <div class="hill"></div>
+        <div class="hero-note">The world is<br>waiting for you ✨</div>
+        <div class="plant">🌿</div>
+      </div>
+    </section>
+
+    <section class="planner" id="planner">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR OUTDOOR COMPANION</p>
+        <h2>What are we doing today?</h2>
+        <p>Choose your mood and let your adventure begin.</p>
+      </div>
+
+      <form id="adventure-form">
+        <label>What's your vibe?</label>
+
+        <div class="mood-grid">
+          <label class="mood-option">
+            <input type="radio" name="mood" value="Relaxing" checked>
+            <span>🌳<br>Relaxing</span>
+          </label>
+          <label class="mood-option">
+            <input type="radio" name="mood" value="Adventure">
+            <span>🥾<br>Adventure</span>
+          </label>
+          <label class="mood-option">
+            <input type="radio" name="mood" value="Learning">
+            <span>🐦<br>Discover</span>
+          </label>
+          <label class="mood-option">
+            <input type="radio" name="mood" value="Fitness">
+            <span>🚴<br>Active</span>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="time">Available time</label>
+            <select id="time">
+              <option value="15">15 minutes</option>
+              <option value="30" selected>30 minutes</option>
+              <option value="60">1 hour</option>
+              <option value="120">2 hours</option>
+              <option value="240">Half a day</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="place">Your environment</label>
+            <select id="place">
+              <option>Garden or backyard</option>
+              <option>Local park</option>
+              <option>Neighborhood</option>
+              <option>Forest or trail</option>
+              <option>Anywhere outdoors</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="extra">Anything else? (optional)</label>
+        <input id="extra" maxlength="150"
+          placeholder="e.g. I love birds and photography">
+
+        <button type="submit" class="primary-btn full-btn">
+          ✨ Discover my adventure
+        </button>
+      </form>
+
+      <section id="result" class="result hidden" aria-live="polite">
+        <div class="result-top">
+          <div>
+            <p class="eyebrow">YOUR OUTDOOR PLAN</p>
+            <h2 id="result-title">Your next adventure</h2>
+          </div>
+          <button id="copy-btn" class="secondary-btn" type="button">
+            Copy plan
+          </button>
+        </div>
+
+        <p id="result-description"></p>
+
+        <h3>Your action plan</h3>
+        <ol id="steps"></ol>
+
+        <div class="challenge-box">
+          <h3>🔎 Nature challenge</h3>
+          <p id="challenge"></p>
+        </div>
+
+        <p id="bring"></p>
+
+        <button id="complete-btn" class="primary-btn full-btn" type="button">
+          ✓ I completed my adventure
+        </button>
+        <p id="completion-message" class="completion-message"></p>
+      </section>
+
+      <p id="status" class="status" role="status"></p>
+    </section>
+
+    <section class="impact">
+      <p class="eyebrow">SMALL STEPS, BIG DIFFERENCE</p>
+      <h2>Technology should help us live, not just scroll.</h2>
+
+      <div class="impact-grid">
+        <article>
+          <span>🌱</span>
+          <h3>Discover nature</h3>
+          <p>Find little adventures in parks, gardens, and your neighborhood.</p>
+        </article>
+        <article>
+          <span>🔒</span>
+          <h3>Private by design</h3>
+          <p>Your activity preferences stay in your browser. No account needed.</p>
+        </article>
+        <article>
+          <span>📵</span>
+          <h3>Put the phone away</h3>
+          <p>Get your plan, head outside, and enjoy the world around you.</p>
+        </article>
+      </div>
+
+      <div class="stats">
+        <div>
+          <strong id="adventure-count">0</strong>
+          <span>Adventures completed</span>
+        </div>
+        <div>
+          <strong id="minutes-count">0</strong>
+          <span>Outdoor minutes planned</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">🌿 TouchGrass<span>.</span></a>
+    <p>Made for the real world. Works without AI services or internet.</p>
+  </footer>
+</body>
+</html>
